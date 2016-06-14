@@ -11,8 +11,18 @@ import urllib
 import urllib2
 
 from workflow import (
-    Workflow,
+    Workflow as WorkflowBase,
 )
+
+
+class Workflow(WorkflowBase):
+
+    def push(self, title, subtitle):
+        self.add_item(
+            title=title,
+            subtitle=subtitle,
+            icon='shanbay_favicon.png',
+        )
 
 
 class Shanbay(object):
@@ -30,20 +40,18 @@ class Shanbay(object):
     def query(self, word):
         try:
             res = self.get('search', {'word': word})
-            wf.add_item(
+            wf.push(
                 title=res['data']['definition'],
                 subtitle="us: [%s], uk: [%s]" % (
                     res['data']['pronunciations']['us'],
                     res['data']['pronunciations']['uk'],
                 ),
-                icon='shanbay_favicon.png',
             )
             return res['data']['id']
         except:
-            wf.add_item(
+            wf.push(
                 title='Ops! The word not exists!',
                 subtitle='please check your spelling mistakes.',
-                icon='shanbay_favicon.png',
             )
 
     def query_example(self, wid):
