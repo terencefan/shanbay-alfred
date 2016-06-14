@@ -20,7 +20,7 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -44,7 +44,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -61,7 +61,7 @@
 		<key>3DB57FB0-A294-4C28-89BA-42FFBB59434F</key>
 		<dict>
 			<key>ypos</key>
-			<real>30</real>
+			<real>70</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

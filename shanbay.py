@@ -30,18 +30,29 @@ class Shanbay(object):
     def query(self, word):
         try:
             res = self.get('search', {'word': word})
-            wf.add_item(title=res['data']['definition'])
+            wf.add_item(
+                title=res['data']['definition'],
+                subtitle="us: [%s], uk: [%s]" % (
+                    res['data']['pronunciations']['us'],
+                    res['data']['pronunciations']['uk'],
+                ),
+                icon='shanbay_favicon.png',
+            )
             return res['data']['id']
         except:
-            wf.add_item(title='word not exists')
+            wf.add_item(
+                title='Ops! The word not exists!',
+                subtitle='please check your spelling mistakes.',
+                icon='shanbay_favicon.png',
+            )
 
     def query_example(self, wid):
         try:
             res = self.get('example', {'vocabulary_id': wid})
             for example in res['data']:
                 wf.add_item(title=example['annotation'])
-        except Exception as e:
-            print(e)
+        except Exception:
+            pass
 
 
 def main(wf):
