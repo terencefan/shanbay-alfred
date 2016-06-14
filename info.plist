@@ -47,28 +47,9 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Shanbay</string>
+	<string>扇贝查词</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python shanbay.py add {query}</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8B728651-CB14-402D-92A9-0B5A7ACD9525</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -109,21 +90,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>ccopen</string>
-				<key>subtext</key>
-				<string>获取扇贝授权码</string>
-				<key>text</key>
-				<string>Shanbay Accquire Access Token</string>
-				<key>withspace</key>
+				<key>concurrently</key>
 				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python shanbay.py add {query}</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>0BE96D58-5502-4028-A614-77A94E9BFC32</string>
+			<string>8B728651-CB14-402D-92A9-0B5A7ACD9525</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -148,20 +127,20 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>keyword</key>
-				<string>ccauth</string>
+				<string>ccopen</string>
 				<key>subtext</key>
-				<string>输入扇贝授权码</string>
+				<string>获取扇贝授权码</string>
 				<key>text</key>
-				<string>Shanbay Authorize</string>
+				<string>Shanbay Accquire Access Token</string>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>6CF63C2F-DFEC-4E6A-85C3-361D45A5DCD7</string>
+			<string>0BE96D58-5502-4028-A614-77A94E9BFC32</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -181,6 +160,27 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>68C975DC-2BDD-4643-80D2-5DB2B3CEF1EE</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ccauth</string>
+				<key>subtext</key>
+				<string>输入扇贝授权码</string>
+				<key>text</key>
+				<string>Shanbay Authorize</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6CF63C2F-DFEC-4E6A-85C3-361D45A5DCD7</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
