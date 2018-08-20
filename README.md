@@ -16,7 +16,7 @@
 
 > ccopen
 
-根据提示进行，当你看到Shanbay OAuth2时，copy浏览器url中的access\_token
+根据提示进行，当你看到 Shanbay OAuth2 时，复制 url 中的 access\_token
 
 > ccauth {your\_access\_token}
 
